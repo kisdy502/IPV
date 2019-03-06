@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.fm.iptv.FiltrateMoviceActivity">
+
+    <Button
+        android:id="@+id/search_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_20"
+        android:layout_marginTop="@dimen/size_20"
+        android:background="@drawable/trailer_btn_normal"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center"
+        android:text="搜索影视"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/size_30" />
+
+    <android.support.v17.leanback.widget.HorizontalGridView
+        android:id="@+id/title_hgridview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_80"
+        android:layout_marginTop="@dimen/size_160"
+        android:clipChildren="false"
+        android:clipToPadding="false" />
+
+
+    <FrameLayout
+        android:id="@+id/content_layout"
+        android:layout_marginTop="@dimen/size_260"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</RelativeLayout>

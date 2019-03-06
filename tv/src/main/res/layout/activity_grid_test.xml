@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.fm.rt.GridTestActivity">
+
+    <cn.fm.rt.MyRecyclerView
+        android:id="@+id/title_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></cn.fm.rt.MyRecyclerView>
+
+
+    <cn.fm.rt.MyRecyclerView
+        android:id="@+id/test_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_list"></cn.fm.rt.MyRecyclerView>
+
+</RelativeLayout>
