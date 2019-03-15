@@ -55,6 +55,7 @@ public class GridTestActivity extends Activity {
         gridRecyclerView.setLayoutManager(gridLayoutManager);
         myAdapter = new MyAdapter(this, beanList);
         gridRecyclerView.setAdapter(myAdapter);
+
         gridRecyclerView.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
@@ -83,6 +84,7 @@ public class GridTestActivity extends Activity {
                 return false;
             }
         });
+        Log.i("gridR", "网格RecyclerView Id:" + gridRecyclerView.getId());
 
 
         linearRecyclerView = findViewById(R.id.title_list);
@@ -97,9 +99,9 @@ public class GridTestActivity extends Activity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if (hasFocus) {
-                    Log.i("gridR", "水平RecyclerView 获得焦点");
+                    Log.i("linearR", "水平RecyclerView 获得焦点");
                 } else {
-                    Log.e("gridR", "水平RecyclerView 失去焦点");
+                    Log.e("linearR", "水平RecyclerView 失去焦点");
                 }
             }
         });
@@ -122,11 +124,12 @@ public class GridTestActivity extends Activity {
                 return false;
             }
         });
+        Log.i("linearR", "水平RecyclerView Id:" + linearRecyclerView.getId());
     }
 
     private void initData() {
         beanList = new ArrayList<>();
-        for (int i = 0; i < 83; i++) {
+        for (int i = 0; i < 483; i++) {
             if (i % 6 == 0) {
                 beanList.add(new Bean("test1", ImgeUrlList.L6_360[0]));
             } else if (i % 6 == 1) {
@@ -145,12 +148,12 @@ public class GridTestActivity extends Activity {
 
     private void initData2() {
         beanList2 = new ArrayList<>();
-        for (int i = 0; i < 42; i++) {
-            if (i % 6 == 0) {
+        for (int i = 0; i < 420; i++) {
+            if (i % 3 == 0) {
                 beanList2.add(new Bean("test1", ImgeUrlList.L4_204[0]));
-            } else if (i % 6 == 1) {
+            } else if (i % 3 == 1) {
                 beanList2.add(new Bean("test1", ImgeUrlList.L4_204[1]));
-            } else if (i % 6 == 2) {
+            } else if (i % 3 == 2) {
                 beanList2.add(new Bean("test1", ImgeUrlList.L4_204[2]));
             }
         }

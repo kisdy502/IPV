@@ -1,6 +1,7 @@
 package cn.fm.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
@@ -15,6 +16,9 @@ import java.util.List;
 import cn.fengmang.libui.flying.ColorFlyingFrameView;
 import cn.fengmang.libui.recycler.OnItemFocusChangeListener;
 import cn.fm.ipv.R;
+import cn.fm.launcher.LauncherActivity;
+import cn.fm.rt.GridTestActivity;
+import cn.fm.vlist.VideoListActivity;
 
 /**
  * Created by Administrator on 2019/2/1.
@@ -73,6 +77,12 @@ public class HomeItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                     }
                 }
             });
+            normalViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mContext.startActivity(new Intent(mContext, LauncherActivity.class));
+                }
+            });
         } else if (holder instanceof CilclerHeaderViewHolder) {
             layoutSize = ItemHelper.getSizeByBlockType(contentGroup.getBlockType(),
                     contentBlockList.get(position).getSpanSize());
@@ -92,6 +102,12 @@ public class HomeItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                     } else {
 
                     }
+                }
+            });
+            cilclerHeaderViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mContext.startActivity(new Intent(mContext, VideoListActivity.class));
                 }
             });
         }

@@ -8,6 +8,7 @@
 
     <cn.fm.rt.MyRecyclerView
         android:id="@+id/title_list"
+        android:nextFocusRight="@+id/title_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"></cn.fm.rt.MyRecyclerView>
 
@@ -16,6 +17,7 @@
         android:id="@+id/test_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:nextFocusDown="@+id/test_list"
         android:layout_below="@+id/title_list"></cn.fm.rt.MyRecyclerView>
 
 </RelativeLayout>

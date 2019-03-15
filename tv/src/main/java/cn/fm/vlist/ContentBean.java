@@ -4,10 +4,6 @@ import android.support.annotation.NonNull;
 
 import java.util.List;
 
-/**
- * Created by Administrator on 2019/1/31.
- */
-
 public class ContentBean {
 
     private int layoutType;   //0,Linear ，1 Grid
